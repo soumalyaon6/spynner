@@ -24,6 +24,8 @@ $ sudo python setup.py install
 
 {{{
 svn checkout http://spynner.googlecode.com/svn/trunk/ spynner
+$ cd spynner
+$ sudo python setup.py install
 }}}
 
 = Usage examples =
