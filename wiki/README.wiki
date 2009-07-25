@@ -50,7 +50,7 @@ http://code.google.com/p/spynner/source/browse/#svn/trunk/examples
 
 = Parsing the HTML = 
 
-You can parse the HTML of a webpage with your favorite library ([http://www.crummy.com/software/BeautifulSoup BeautifulSoup], [http://codespeak.net/lxml/ lxml], ...). As Jquery is already being used as Javascript selector, it may be very comfy to use the [http://pypi.python.org/pypi/pyquery pyquery], its (although not complete) Python equivalent.
+You can parse the HTML of a webpage with your favorite library ([http://www.crummy.com/software/BeautifulSoup BeautifulSoup], [http://codespeak.net/lxml/ lxml], ...). As Jquery is already being used as Javascript selector, it may be very comfy to use the [http://pypi.python.org/pypi/pyquery pyquery], its (not still complete) Python equivalent.
 
 = Feedback =
 
