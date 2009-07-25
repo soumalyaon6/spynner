@@ -8,6 +8,8 @@ Spynner is a programmatic web browser module for Python. It is based upon the [h
 
 Using spynner you would able to interact with a web browser from Python with no GUI at all (though a browser window can be opened for debugging purposes). Spynner may be used to implement crawlers or to test websites.
 
+Spynner uses [http://docs.jquery.com Jquery] as Javascript library.
+
 = Install =
 
   * A release version (recommended):
@@ -27,6 +29,29 @@ $ cd spynner
 $ sudo python setup.py install
 }}}
 
-= Usage examples =
+= Usage = 
 
-TODO
+Spynner uses [http://docs.jquery.com/Selectors Jquery selectors] in the methods where a DOM element must be selected (fill, select, click, choose, check, ...).
+
+{{{
+import spynner
+
+browser = spynner.Browser(verbose_level=spynner.DEBUG)
+browser.load("http://www.wordreference.com")
+browser.select("#esen")
+browser.fill("input[name=enit]", "hola")
+browser.click("input[name=b]")
+html = browser.get_html()
+}}}
+
+See more examples in the subversion repository: 
+
+http://code.google.com/p/spynner/source/browse/#svn/trunk/examples
+
+= Parsing the HTML = 
+
+You can parse the HTML of a webpage with your favorite library ([http://www.crummy.com/software/BeautifulSoup BeautifulSoup], [http://codespeak.net/lxml/ lxml], ...). As Jquery is already being used as Javascript selector, it may be a good idea to use the [http://pypi.python.org/pypi/pyquery pyquery], the Python equivalent.
+
+= Feedback =
+
+Open an issue with bugs or feature request. You can also email me: tokland AT gmail DOT com
