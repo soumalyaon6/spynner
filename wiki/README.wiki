@@ -1,6 +1,6 @@
 #summary Basic information about spynner.
 #labels Featured,Phase-Design
-= What's spynner =
+= Introdudiction =
 
 Spynner is a programmatic web browser module for Python. It is based upon the [http://trac.webkit.org/wiki/QtWebKit PyQtWebKit] framework, so it supports Javascript, AJAX, and every other technology that Webkit provides. 
 
