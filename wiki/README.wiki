@@ -8,7 +8,7 @@ Spynner is a programmatic web browser module for Python. It is based upon the [h
 
 Using spynner you would able to simulate being a web browser from Python with no GUI at all (though a browser window can be opened for debugging purposes). Spynner may be used to implement crawlers and test websites.
 
-Spynner uses [http://docs.jquery.com Jquery] as Javascript library.
+Spynner uses [http://jquery.com Jquery] as Javascript library.
 
 = Install =
 
