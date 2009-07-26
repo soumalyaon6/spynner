@@ -2,7 +2,7 @@
 #labels Featured,Phase-Design
 = Introdudiction =
 
-Spynner is a programmatic web browser module for Python. It is based upon the [http://trac.webkit.org/wiki/QtWebKit PyQtWebKit] framework, so it supports Javascript, AJAX, and every other technology that Webkit provides. 
+Spynner is a programmatic web browser module for Python. It is based upon the [http://trac.webkit.org/wiki/QtWebKit PyQtWebKit] framework, so it supports Javascript, AJAX, and every other technology that Webkit can handle. 
 
 [http://webkit.org/ WebKit] is an open-source web browser layout engine originally derived by Apple Inc. from the Konqueror browser’s KHTML software library for use as the engine of Mac OS X’s Safari web browser and has now been further developed by individuals from the KDE project, Apple Inc., Nokia, Google, Torch Mobile and others.
 
@@ -24,14 +24,21 @@ $ sudo python setup.py install
   * The bleeding edge version:
 
 {{{
-$ svn checkout http://spynner.googlecode.com/svn/trunk/ spynner
-$ cd spynner
+$ svn checkout http://spynner.googlecode.com/svn/trunk/ spynner-trunk
+$ cd spynner-trunk
 $ sudo python setup.py install
 }}}
 
-= Usage = 
+= Running Javascript = 
 
-Spynner uses [http://docs.jquery.com/Selectors Jquery selectors] in that methods where a DOM element must be selected (fill, select, click, choose, check, ...).
+Spynner uses [http://jquery.com Jquery] to ease Javascript interface with pages. By default, two modules are injected to pages:
+
+  * [http://docs.jquery.com/Downloading_jQuery Jquery core]: Adds [http://docs.jquery.com/Selectors selectors] (they are used in _action_ fill, select, click, choose, check and uncheck).
+  * [http://code.google.com/p/jqueryjs/source/browse/trunk/plugins/simulate Jquery simulate plugins]: Allows simulation of mouse and keyboard events. Used by _click_ action .
+
+= Usage =
+
+Basic example:
 
 {{{
 import spynner
@@ -44,14 +51,40 @@ browser.click("input[name=b]")
 html = browser.get_html()
 }}}
 
+At first you'd want to see what is happening, open the Browser with webview active:
+
+{{{
+import spynner
+
+browser = spynner.Browser(webview=True, verbose_level=spynner.DEBUG)
+browser.show()
+browser.load("http://www.wordreference.com")
+browser.select("#esen")
+browser.fill("input[name=enit]", "hola")
+browser.click("input[name=b]")
+}}}
+
 See more examples of usage in the subversion repository: 
 
 http://code.google.com/p/spynner/source/browse/#svn/trunk/examples
 
 = Parsing the HTML = 
 
-You can parse the HTML of a webpage with your favorite library ([http://www.crummy.com/software/BeautifulSoup BeautifulSoup], [http://codespeak.net/lxml/ lxml], ...). As Jquery is already being used as Javascript selector, it may be very comfy to use the [http://pypi.python.org/pypi/pyquery pyquery], its (not still complete) Python equivalent.
+You can parse the HTML of a webpage with your favorite library ([http://www.crummy.com/software/BeautifulSoup BeautifulSoup], [http://codespeak.net/lxml/ lxml], ...). Since Jquery is already being used as Javascript library, it may be comfy to use the [http://pypi.python.org/pypi/pyquery pyquery], its (not still complete) Python equivalent:
+
+{{{
+import spynner
+import pyquery
+
+browser = spynner.Browser()
+...
+html = browser.get_html()
+d.make_links_absolute(base_url=browser.get_url())
+d = pyquery.Pyquery(html)
+href = d("#someid").attr("href")
+browser.download(href)
+}}}
 
 = Feedback =
 
-Open an issue with bugs or feature request. You can also email me: tokland AT gmail DOT com
+Open an issue to reports a bug or a feature request. You can also email me: tokland AT gmail DOT com
