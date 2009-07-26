@@ -6,9 +6,11 @@ Spynner is a programmatic web browser module for Python. It is based upon the [h
 
 Using spynner you would able to simulate a web browser from Python with no GUI (though a browser window can be opened for debugging purposes). Spynner may be used to implement crawlers and test websites.
 
-= Install =
+= Dependencies =
 
-To install spynner you'll need [http://www.riverbankcomputing.co.uk/software/pyqt/download PyQt].
+  * [http://www.riverbankcomputing.co.uk/software/pyqt/download PyQt]: Python wrappers for the Qt framework.
+
+= Install =
 
   * A release version (recommended):
 
@@ -79,7 +81,7 @@ http://code.google.com/p/spynner/source/browse/#svn/trunk/examples
 
 = Parsing the HTML = 
 
-You can parse the HTML of a webpage with your favorite library ([http://www.crummy.com/software/BeautifulSoup BeautifulSoup], [http://codespeak.net/lxml/ lxml], ...). Since we area already using Jquery, it feels just natural to exploit [http://pypi.python.org/pypi/pyquery pyquery], its (not still complete) Python equivalent:
+You can parse the HTML of a webpage with your favorite library ([http://www.crummy.com/software/BeautifulSoup BeautifulSoup], [http://codespeak.net/lxml/ lxml], ...). Since we area already using Jquery, it feels just natural to exploit [http://pypi.python.org/pypi/pyquery pyquery], its (not still complete) Python counterpart:
 
 {{{
 import spynner
