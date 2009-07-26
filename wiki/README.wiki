@@ -57,7 +57,7 @@ browser.runjs("console.log('I can run Javascript')")
 html = browser.get_html()
 }}}
 
-At first you'd want to see what is happening, open the Browser with webview active:
+Sometimes you'll want to see what is happening:
 
 {{{
 import spynner
@@ -76,7 +76,7 @@ http://code.google.com/p/spynner/source/browse/#svn/trunk/examples
 
 = Parsing the HTML = 
 
-You can parse the HTML of a webpage with your favorite library ([http://www.crummy.com/software/BeautifulSoup BeautifulSoup], [http://codespeak.net/lxml/ lxml], ...). Since Jquery is already being used as Javascript library, it may be comfy to use the [http://pypi.python.org/pypi/pyquery pyquery], its (not still complete) Python equivalent:
+You can parse the HTML of a webpage with your favorite library ([http://www.crummy.com/software/BeautifulSoup BeautifulSoup], [http://codespeak.net/lxml/ lxml], ...). Since Jquery is already being used as Javascript library, it may feel natural to use the [http://pypi.python.org/pypi/pyquery pyquery], its (not still complete) Python equivalent:
 
 {{{
 import spynner
@@ -85,10 +85,10 @@ import pyquery
 browser = spynner.Browser()
 ...
 html = browser.get_html()
-d.make_links_absolute(base_url=browser.get_url())
 d = pyquery.Pyquery(html)
-href = d("#someid").attr("href")
-browser.download(href)
+d.make_links_absolute(browser.get_url())
+href = d("#somelink").attr("href")
+browser.download(href, open("outputfile", "w"))
 }}}
 
 = Feedback =
