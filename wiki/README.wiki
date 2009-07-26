@@ -36,16 +36,6 @@ $ cd spynner-trunk
 $ sudo python setup.py install
 }}}
 
-= Running Javascript = 
-
-Spynner uses Jquery to make Javascript interface easier. By default, two modules are injected to every loaded page:
-
-  * [http://docs.jquery.com/Downloading_jQuery Jquery core]: Amongst other things, it adds the powerful Jquery [http://docs.jquery.com/Selectors selectors], which are used internally by spynner on some action methods (_fill_, _select_, _click_, _check_, ...). Of course you can also use Jquery when you run your own code in a page.
-
-  * [http://code.google.com/p/jqueryjs/source/browse/trunk/plugins/simulate Jquery simulate plugins]: Makes it possible to simulate mouse and keyboard events (and used internally by the _click_ action). Look at the library to see which kind of events you can fire.
-
-Note that for compatibility you must use _jQuery(...)_ instead of the common shortcut _$(...)_.
-
 = Usage =
 
 A basic example:
@@ -79,6 +69,16 @@ browser.click("input[name=b]")
 See more examples in the subversion repository: 
 
 http://code.google.com/p/spynner/source/browse/#svn/trunk/examples
+
+= Running Javascript = 
+
+Spynner uses Jquery to make Javascript interface easier. By default, two modules are injected to every loaded page:
+
+  * [http://docs.jquery.com/Downloading_jQuery Jquery core]: Amongst other things, it adds the powerful Jquery [http://docs.jquery.com/Selectors selectors], which are used internally by spynner on some action methods (_fill_, _select_, _click_, _check_, ...). Of course you can also use Jquery when you run your own code in a page.
+
+  * [http://code.google.com/p/jqueryjs/source/browse/trunk/plugins/simulate Jquery simulate plugins]: Makes it possible to simulate mouse and keyboard events (and used internally by the _click_ action). Look at the library to see which kind of events you can fire.
+
+Note that for compatibility you must use _jQuery(...)_ instead of the common shortcut _$(...)_.
 
 = Parsing the HTML = 
 
