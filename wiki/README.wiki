@@ -53,6 +53,7 @@ browser.load("http://www.wordreference.com")
 browser.select("#esen")
 browser.fill("input[name=enit]", "hola")
 browser.click("input[name=b]")
+browser.runjs("console.log('I can run Javascript')")
 html = browser.get_html()
 }}}
 
