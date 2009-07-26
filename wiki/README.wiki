@@ -99,4 +99,4 @@ browser.download(href, open("/path/outputfile", "w"))
 
 = Feedback =
 
-Open an [http://code.google.com/p/spynner/issues/list issue] to reports a bug or ask for a feature. You can also email me: [tokland@gmail.com tokland@gmail.com]
+Open an [http://code.google.com/p/spynner/issues/list issue] to reports a bug or ask for a feature. You can also email me: [mailto://tokland@gmail.com tokland@gmail.com]
