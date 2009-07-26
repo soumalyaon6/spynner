@@ -2,9 +2,7 @@
 #labels Featured,Phase-Design
 = Introduction =
 
-Spynner is a programmatic web browser module for Python. It is based upon the [http://trac.webkit.org/wiki/QtWebKit PyQtWebKit] framework, so it supports Javascript, AJAX, and every other technology that Webkit can handle. 
-
-[http://webkit.org/ WebKit] is an open-source web browser layout engine originally derived by Apple Inc. from the Konqueror browser’s KHTML software library for use as the engine of Mac OS X’s Safari web browser and has now been further developed by individuals from the KDE project, Apple Inc., Nokia, Google, Torch Mobile and others.
+Spynner is a programmatic web browser module for Python. It is based upon the [http://trac.webkit.org/wiki/QtWebKit PyQtWebKit] framework, so it supports Javascript, AJAX, and every other technology that [http://webkit.org/ WebKit] can handle. 
 
 Using spynner you would able to simulate a web browser from Python with no GUI (though a browser window can be opened for debugging purposes). Spynner may be used to implement crawlers and test websites.
 
@@ -35,15 +33,15 @@ $ sudo python setup.py install
 
 = Running Javascript = 
 
-Spynner uses Jquery to make Javascript interface with pages easy. By default, two modules are injected to every loaded page:
+Spynner uses Jquery to make Javascript interface with pages easier. By default, two modules are injected to every loaded page:
 
-  * [http://docs.jquery.com/Downloading_jQuery Jquery core]: Adds [http://docs.jquery.com/Selectors selectors]. They are used internally by spynner on some action methods (_fill_, _select_, _click_, _check_, ...) but of course you can also use it in you Javascript injection code.
+  * [http://docs.jquery.com/Downloading_jQuery Jquery core]: Amongst other things, it adds the handy Jquery [http://docs.jquery.com/Selectors selectors], which are used internally by spynner on some action methods (_fill_, _select_, _click_, _check_, ...). Of course you can also use it when you inject JS code to the page.
 
-  * [http://code.google.com/p/jqueryjs/source/browse/trunk/plugins/simulate Jquery simulate plugins]: Used to simulate mouse and keyboard events. Used internally by the _click_ action .
+  * [http://code.google.com/p/jqueryjs/source/browse/trunk/plugins/simulate Jquery simulate plugins]: Makes it possible to simulate mouse and keyboard events. Used internally by the _click_ action .
 
 = Usage =
 
-Basic example:
+A basic example:
 
 {{{
 import spynner
@@ -70,13 +68,13 @@ browser.fill("input[name=enit]", "hola")
 browser.click("input[name=b]")
 }}}
 
-See more examples of usage in the subversion repository: 
+See more examples in the subversion repository: 
 
 http://code.google.com/p/spynner/source/browse/#svn/trunk/examples
 
 = Parsing the HTML = 
 
-You can parse the HTML of a webpage with your favorite library ([http://www.crummy.com/software/BeautifulSoup BeautifulSoup], [http://codespeak.net/lxml/ lxml], ...). Since Jquery is already being used as Javascript library, it may feel natural to use the [http://pypi.python.org/pypi/pyquery pyquery], its (not still complete) Python equivalent:
+You can parse the HTML of a webpage with your favorite library ([http://www.crummy.com/software/BeautifulSoup BeautifulSoup], [http://codespeak.net/lxml/ lxml], ...). Since we area already using Jquery, it feels just natural to exploit [http://pypi.python.org/pypi/pyquery pyquery], its (not still complete) Python equivalent:
 
 {{{
 import spynner
@@ -88,7 +86,7 @@ html = browser.get_html()
 d = pyquery.Pyquery(html)
 d.make_links_absolute(browser.get_url())
 href = d("#somelink").attr("href")
-browser.download(href, open("outputfile", "w"))
+browser.download(href, open("/path/outputfile", "w"))
 }}}
 
 = Feedback =
