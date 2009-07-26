@@ -6,9 +6,7 @@ Spynner is a programmatic web browser module for Python. It is based upon the [h
 
 [http://webkit.org/ WebKit] is an open-source web browser layout engine originally derived by Apple Inc. from the Konqueror browser’s KHTML software library for use as the engine of Mac OS X’s Safari web browser and has now been further developed by individuals from the KDE project, Apple Inc., Nokia, Google, Torch Mobile and others.
 
-Using spynner you would able to simulate being a web browser from Python with no GUI at all (though a browser window can be opened for debugging purposes). Spynner may be used to implement crawlers and test websites.
-
-Spynner uses [http://jquery.com Jquery] as Javascript library.
+Using spynner you would able to simulate a web browser from Python with no GUI (though a browser window can be opened for debugging purposes). Spynner may be used to implement crawlers and test websites.
 
 = Install =
 
@@ -21,6 +19,12 @@ $ cd spynner-VERSION
 $ sudo python setup.py install
 }}}
 
+or 
+
+{{{
+$ sudo easy_install spynner
+}}}
+
   * The bleeding edge version:
 
 {{{
@@ -31,10 +35,11 @@ $ sudo python setup.py install
 
 = Running Javascript = 
 
-Spynner uses [http://jquery.com Jquery] to ease Javascript interface with pages. By default, two modules are injected to pages:
+Spynner uses Jquery to make Javascript interface with pages easy. By default, two modules are injected to every loaded page:
 
-  * [http://docs.jquery.com/Downloading_jQuery Jquery core]: Adds [http://docs.jquery.com/Selectors selectors] (they are used in _action_ fill, select, click, choose, check and uncheck).
-  * [http://code.google.com/p/jqueryjs/source/browse/trunk/plugins/simulate Jquery simulate plugins]: Allows simulation of mouse and keyboard events. Used by _click_ action .
+  * [http://docs.jquery.com/Downloading_jQuery Jquery core]: Adds [http://docs.jquery.com/Selectors selectors]. They are used internally by spynner on some action methods (_fill_, _select_, _click_, _check_, ...) but of course you can also use it in you Javascript injection code.
+
+  * [http://code.google.com/p/jqueryjs/source/browse/trunk/plugins/simulate Jquery simulate plugins]: Used to simulate mouse and keyboard events. Used internally by the _click_ action .
 
 = Usage =
 
