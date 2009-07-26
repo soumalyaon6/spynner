@@ -8,7 +8,8 @@ Using spynner you would able to simulate a web browser from Python with no GUI (
 
 = Dependencies =
 
-  * [http://www.riverbankcomputing.co.uk/software/pyqt/download PyQt]: Python wrappers for the Qt framework.
+  * [http://www.python.org Python] (>=2.4)
+  * [http://www.riverbankcomputing.co.uk/software/pyqt/download PyQt] (>=4.4.3): Python wrappers for the Qt framework.
 
 = Install =
 
