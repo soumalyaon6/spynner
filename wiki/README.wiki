@@ -2,7 +2,7 @@
 #labels Featured,Phase-Design
 = Introduction =
 
-Spynner is a programmatic web browser module for Python. It is based upon [http://www.qtsoftware.com/ Qt] and [http://webkit.org/ WebKit] frameworks, so it supports Javascript, AJAX, and every other technology that WebKit is able to handle. 
+Spynner is a programmatic web browser module for Python. It is based upon [http://www.qtsoftware.com/ Qt] and [http://webkit.org/ WebKit] frameworks, so it supports Javascript, AJAX, and every other technology that !WebKit is able to handle. 
 
 Using spynner you would able to simulate a web browser from Python with no GUI (though a browser window can be opened for debugging purposes). Spynner may be used to implement crawlers and test websites.
 
