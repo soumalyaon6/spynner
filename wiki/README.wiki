@@ -2,18 +2,18 @@
 #labels Featured,Phase-Design
 = Introduction =
 
-Spynner is a programmatic web browser module for Python. It is based upon the [http://trac.webkit.org/wiki/QtWebKit PyQtWebKit] framework, so it supports Javascript, AJAX, and every other technology that [http://webkit.org/ WebKit] handles. 
+Spynner is a programmatic web browser module for Python. It is based upon [http://www.qtsoftware.com/ Qt] and [http://webkit.org/ WebKit] frameworks, so it supports Javascript, AJAX, and every other technology that WebKit is able to handle. 
 
 Using spynner you would able to simulate a web browser from Python with no GUI (though a browser window can be opened for debugging purposes). Spynner may be used to implement crawlers and test websites.
 
 = Dependencies =
 
   * [http://www.python.org Python] (>=2.5)
-  * [http://www.riverbankcomputing.co.uk/software/pyqt/download PyQt] (>=4.4.3): Python wrappers for the Qt framework.
+  * [http://www.riverbankcomputing.co.uk/software/pyqt/download PyQt] (>=4.4.3): Python wrappers for the [http://www.qtsoftware.com/ Qt] framework.
 
 = Install =
 
-  * A release version (recommended):
+  * A [http://code.google.com/p/spynner/downloads/list release] version (recommended):
 
 {{{
 $ wget http://spynner.googlecode.com/files/spynner-VERSION.tgz
@@ -103,4 +103,4 @@ browser.download(href, open("/path/outputfile", "w"))
 
 = Feedback =
 
-Open an [http://code.google.com/p/spynner/issues/list issue] to reports a bug or ask for a feature. You can also email me: [mailto://tokland@gmail.com tokland@gmail.com]
+Open an [http://code.google.com/p/spynner/issues/list issue] to report a bug or ask for a feature. You can also email me: [mailto://tokland@gmail.com tokland@gmail.com]
