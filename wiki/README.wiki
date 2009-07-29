@@ -61,8 +61,6 @@ browser.close()
 Sometimes you'll want to see what is going on:
 
 {{{
-import spynner
-
 browser = spynner.Browser(debug_level=spynner.DEBUG)
 browser.create_webview()
 browser.show()
