@@ -2,9 +2,9 @@
 #labels Featured,Phase-Design
 = Introduction =
 
-Spynner is a programmatic web browser module for Python. It is based upon [http://www.qtsoftware.com/ Qt] and [http://webkit.org/ WebKit] frameworks, so it supports Javascript, AJAX, and every other technology that !WebKit is able to handle. 
+Spynner is a stateful programmatic web browser module for Python. It is based upon [http://www.qtsoftware.com/ Qt] and [http://webkit.org/ WebKit] frameworks, so it supports Javascript, AJAX, and every other technology that !WebKit is able to handle (flash, SVG, ...). 
 
-Using spynner you would able to simulate a web browser from Python with no GUI (though a browser window can be opened for debugging purposes). Spynner may be used to implement crawlers and test websites.
+Using spynner you would able to simulate a web browser with no GUI (though a browser window can be opened for debugging purposes), so it may be used to implement crawlers or as acceptance testing tool.
 
 = Dependencies =
 
@@ -53,7 +53,7 @@ browser.select("#esen")
 browser.fill("input[name=enit]", "hola")
 browser.click("input[name=b]")
 browser.runjs("console.log('I can run Javascript')")
-browser.runjs("console.log('I can run Jquery: ' + jQuery('a:first').attr('href'))")
+browser.runjs("console.log('I can run jQuery: ' + jQuery('a:first').attr('href'))")
 print browser.html
 browser.close()
 }}}
@@ -67,17 +67,17 @@ browser.show()
 ...
 }}}
 
-See more examples in the subversion repository: 
+See more examples in the repository: 
 
 http://code.google.com/p/spynner/source/browse/#svn/trunk/examples
 
 = Running Javascript = 
 
-Spynner uses Jquery to make Javascript interface easier. By default, two modules are injected to every loaded page:
+Spynner uses jQuery to make Javascript interface easier. By default, two modules are injected to every loaded page:
 
-  * [http://docs.jquery.com/Downloading_jQuery Jquery core]: Amongst other things, it adds the powerful [http://docs.jquery.com/Selectors Jquery selectors], which are used internally by spynner (_fill_, _select_, _click_, _check_, ...). Of course you can also use Jquery when you inject your own code into a page.
+  * [http://docs.jquery.com/Downloading_jQuery jQuery core]: Amongst other things, it adds the powerful [http://docs.jquery.com/Selectors jQuery selectors], which are used internally by spynner (_fill_, _select_, _click_, _check_, ...). Of course you can also use jQuery when you inject your own code into a page.
 
-  * [http://code.google.com/p/jqueryjs/source/browse/trunk/plugins/simulate Jquery _simulate_ plugin]: Makes it possible to simulate mouse and keyboard events (and used internally by the _click_ action). Look up the library code to see which kind of events you can fire.
+  * [http://code.google.com/p/jqueryjs/source/browse/trunk/plugins/simulate jQuery _simulate_ plugin]: Makes it possible to simulate mouse and keyboard events (for now spynner uses it only in the _click_ action). Look up the library code to see which kind of events you can fire.
 
 Note that for the sake of compatibility you must use _jQuery(...)_ instead of the common shortcut _$(...)_.
 
@@ -99,4 +99,4 @@ browser.download(href, open("/path/outputfile", "w"))
 
 = Feedback =
 
-Open an [http://code.google.com/p/spynner/issues/list issue] to report a bug or ask for a feature. You can also email me: [mailto://tokland@gmail.com tokland@gmail.com]
+Open an [http://code.google.com/p/spynner/issues/list issue] to report a bug or ask for a feature. Other comments and suggestions can be directly emailed to me: [mailto://tokland@gmail.com tokland@gmail.com].
