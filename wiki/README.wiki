@@ -126,6 +126,12 @@ Spynner needs a X11 server to run so if you are using it in a server without X11
 $ xvfb-run python myscript_using_spynner.py
 }}}
 
+If you are planning to take snapshots of websites, make sure you run the fake server with a high color depth (default is 8 bits):
+
+{{{
+$ xvfb-run -s "-screen 0 640x480x24" python my_fancy_spanshotter.py
+}}}
+
 = Feedback =
 
 Open an [http://code.google.com/p/spynner/issues/list issue] to report a bug or request a new feature. Other comments and suggestions can be directly emailed to me: [mailto://tokland@gmail.com tokland@gmail.com].
