@@ -90,7 +90,7 @@ In []: browser = spynner.Browser()
 In []: browser.create_webview()
 In []: browser.show()
 ...
-}
+}}}
 
 = Running Javascript = 
 
