@@ -2,7 +2,7 @@
 #labels Featured,Phase-Design
 = Introduction =
 
-Spynner is a stateful programmatic web browser module for Python. It is based upon [http://www.qtsoftware.com/ Qt] and [http://webkit.org/ WebKit] frameworks, so it supports Javascript, AJAX, and every other technology that !WebKit is able to handle (flash, SVG, ...). 
+Spynner is a stateful programmatic web browser module for Python. It is based upon [http://www.qtsoftware.com/ Qt] and [http://webkit.org/ WebKit] frameworks, so it supports Javascript, AJAX, and every other technology that !WebKit is able to handle (Flash, SVG, ...). 
 
 Using spynner you would able to simulate a web browser with no GUI (though a browser window can be opened for debugging purposes), so it may be used to implement crawlers or as acceptance testing tool.
 
@@ -95,6 +95,16 @@ d = pyquery.Pyquery(browser.html)
 d.make_links_absolute(browser.get_url())
 href = d("#somelink").attr("href")
 browser.download(href, open("/path/outputfile", "w"))
+}}}
+
+= Running Spynner without X11 ==
+
+Spynner needs a X11 server to run. If you are running it in a server without X11 you must install the virtual [http://en.wikipedia.org/wiki/Xvfb Xvfb server]. Debian users can use the small wrapper (xvfb-run). If you are not using Debian, you can download it here:
+
+http://www.mail-archive.com/debian-x@lists.debian.org/msg69632/x-run
+
+{{{
+$ xvfb-run python myscript_using_spynner.py
 }}}
 
 = Feedback =
