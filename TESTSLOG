@@ -1,0 +1,37 @@
+System: Linux 2.6.28-ARCH x86_64 GenuineIntel GNU/Linux
+Python: 2.6.2
+PyQT: 4.4.4
+
+test_browser_webview (__main__.SpynnerBrowserTest) ... ok
+test_check (__main__.SpynnerBrowserTest) ... ok
+test_choose (__main__.SpynnerBrowserTest) ... ok
+test_click (__main__.SpynnerBrowserTest) ... ok
+test_download (__main__.SpynnerBrowserTest) ... ok
+test_download_error (__main__.SpynnerBrowserTest) ... ok
+test_fill (__main__.SpynnerBrowserTest) ... ok
+test_get_cookies (__main__.SpynnerBrowserTest) ... ok
+test_get_url (__main__.SpynnerBrowserTest) ... ok
+test_get_url_from_path (__main__.SpynnerBrowserTest) ... ok
+test_html (__main__.SpynnerBrowserTest) ... ok
+test_html_contains (__main__.SpynnerBrowserTest) ... ok
+test_html_parser (__main__.SpynnerBrowserTest) ... ok
+test_http_authentication (__main__.SpynnerBrowserTest) ... ok
+test_javascript_alert (__main__.SpynnerBrowserTest) ... ok
+test_javascript_confirm (__main__.SpynnerBrowserTest) ... ok
+test_javascript_console_message (__main__.SpynnerBrowserTest) ... ok
+test_javascript_prompt (__main__.SpynnerBrowserTest) ... ok
+test_load_should_return_status_boolean (__main__.SpynnerBrowserTest) ... ok
+test_runjs (__main__.SpynnerBrowserTest) ... ok
+test_select (__main__.SpynnerBrowserTest) ... ok
+test_set_cookies (__main__.SpynnerBrowserTest) ... ok
+test_set_url_filter (__main__.SpynnerBrowserTest) ... ok
+test_snapshot (__main__.SpynnerBrowserTest) ... ok
+test_uncheck (__main__.SpynnerBrowserTest) ... ok
+test_user_agent (__main__.SpynnerBrowserTest) ... ok
+test_wait_page_load (__main__.SpynnerBrowserTest) ... ok
+test_wait_page_load_raises_exception_on_timeout (__main__.SpynnerBrowserTest) ... ok
+
+----------------------------------------------------------------------
+Ran 28 tests in 7.668s
+
+OK
