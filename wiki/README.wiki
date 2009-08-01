@@ -89,7 +89,7 @@ Spynner uses jQuery to make Javascript interface easier. By default, two modules
 
 Note that you must use __jQuery(...)_ instead of _jQuery(...)_  or the common shortcut _$(...)_. That prevents name clashing with the jQuery library used by the page.
 
-= Cook your soup: parsing the HTML = 
+= Cooking your soup: parse the HTML = 
 
 You can parse the HTML of a webpage with your favorite parsing library ([http://www.crummy.com/software/BeautifulSoup BeautifulSoup], [http://codespeak.net/lxml/ lxml], ...). Since we are already using Jquery for Javascript, it feels just natural to work with [http://pypi.python.org/pypi/pyquery pyquery], its Python counterpart:
 
@@ -107,7 +107,7 @@ browser.download(href, open("/path/outputfile", "w"))
 
 = Running Spynner without X11 ==
 
-Spynner needs a X11 server to run. If you are running it in a server without X11 you must install the virtual [http://en.wikipedia.org/wiki/Xvfb Xvfb server]. Debian users can use the small wrapper (xvfb-run). If you are not using Debian, you can download it here:
+Spynner needs a X11 server to run so if you are running it in a server without X11 you should install the virtual [http://en.wikipedia.org/wiki/Xvfb Xvfb server]. Debian users can use the small wrapper (_xvfb-run_) shipped with the package. If you are not using Debian, you can download it here:
 
 http://www.mail-archive.com/debian-x@lists.debian.org/msg69632/x-run
 
