@@ -42,7 +42,9 @@ http://tokland.freehostia.com/googlecode/spynner/api/
 
 You can generate the API locally (will create docs/api directory):
 
+{{{
 $ python setup.py gen_doc
+}}}
 
 = Usage =
 
