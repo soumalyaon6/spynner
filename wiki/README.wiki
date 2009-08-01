@@ -2,7 +2,7 @@
 #labels Featured,Phase-Design
 = Introduction =
 
-Spynner is a stateful programmatic web browser module for Python. It is based upon [http://www.qtsoftware.com/ Qt] and [http://webkit.org/ WebKit], so it supports Javascript, AJAX, and every other technology that !WebKit is able to handle (Flash, SVG, ...). Spynner takes advantage of [http://jquery.com jQuery], a powerful Javascript library that makes the interaction with pages and event simulation really easy.  
+Spynner is a stateful programmatic web browser module for Python. It is based upon [http://www.qtsoftware.com/ Qt] and [http://webkit.org/ WebKit], so it supports Javascript, AJAX, and every other technology that !WebKit is able to handle (Flash, SVG, ...). Spynner takes advantage of [http://jquery.com jQuery], a powerful Javascript library that makes the interaction with pages and event simulation straightforward.  
 
 Using Spynner you would able to simulate a web browser with no GUI (though a browsing window can be opened for debugging purposes), so it may be used to implement crawlers or acceptance testing tools.
 
@@ -126,7 +126,7 @@ Spynner needs a X11 server to run so if you are using it in a server without X11
 $ xvfb-run python myscript_using_spynner.py
 }}}
 
-If you are planning to take snapshots of websites, make sure you run the fake server with a high color depth (default is 8 bits):
+If you are planning to take snapshots of websites, make sure you run the fake server with a higher color depth (default is 8 bits):
 
 {{{
 $ xvfb-run -s "-screen 0 640x480x24" python my_fancy_spanshotter.py
@@ -134,4 +134,6 @@ $ xvfb-run -s "-screen 0 640x480x24" python my_fancy_spanshotter.py
 
 = Feedback =
 
-Open an [http://code.google.com/p/spynner/issues/list issue] to report a bug or request a new feature. Other comments and suggestions can be directly emailed to me: [mailto://tokland@gmail.com tokland@gmail.com].
+Open an [http://code.google.com/p/spynner/issues/list issue] to report a bug or request a new feature. Other comments and suggestions can be directly emailed to me: [mailto://tokland@gmail.com tokland@gmail.com]. 
+
+If there is something you can do with you browser which you cannot simulate with Spynner, that's certainly a bug.
