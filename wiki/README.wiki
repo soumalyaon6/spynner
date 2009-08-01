@@ -65,6 +65,12 @@ print browser.url, browser.html
 browser.close()
 }}}
 
+See more examples in the repository: 
+
+http://code.google.com/p/spynner/source/browse/#svn/trunk/examples
+
+= Interactive browsing =
+
 Sometimes you'll want to see what is going on:
 
 {{{
@@ -75,9 +81,16 @@ browser.show()
 ...
 }}}
 
-See more examples in the repository: 
+With the help of [http://ipython.scipy.org/ ipython] you can run interactive sessions:
 
-http://code.google.com/p/spynner/source/browse/#svn/trunk/examples
+{{{
+$ ipython
+
+In []: browser = spynner.Browser()
+In []: browser.create_webview()
+In []: browser.show()
+...
+}
 
 = Running Javascript = 
 
@@ -107,9 +120,7 @@ browser.download(href, open("/path/outputfile", "w"))
 
 = Running Spynner without X11 ==
 
-Spynner needs a X11 server to run so if you are running it in a server without X11 you should install the virtual [http://en.wikipedia.org/wiki/Xvfb Xvfb server]. Debian users can use the small wrapper (_xvfb-run_) shipped with the package. If you are not using Debian, you can download it here:
-
-http://www.mail-archive.com/debian-x@lists.debian.org/msg69632/x-run
+Spynner needs a X11 server to run so if you are using it in a server without X11 you should install the virtual [http://en.wikipedia.org/wiki/Xvfb Xvfb server]. Debian users can use the small wrapper (_xvfb-run_) shipped with the package. If you are not using Debian, you can always [http://www.mail-archive.com/debian-x@lists.debian.org/msg69632/x-run download] it:
 
 {{{
 $ xvfb-run python myscript_using_spynner.py
