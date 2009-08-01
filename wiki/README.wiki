@@ -100,7 +100,7 @@ Spynner uses jQuery to make Javascript interface easier. By default, two modules
 
   * [http://code.google.com/p/jqueryjs/source/browse/trunk/plugins/simulate jQuery _simulate_ plugin]: Makes it possible to simulate mouse and keyboard events (for now spynner uses it only in the _click_ action). Look up the library code to see which kind of events you can fire.
 
-Note that you must use __jQuery(...)_ instead of _jQuery(...)_  or the common shortcut _$(...)_. That prevents name clashing with the jQuery library used by the page.
+Note that you must use _jQuery(...) instead of jQuery(...)  or the common shortcut $(...). That prevents name clashing with the jQuery library used by the page.
 
 = Cooking your soup: parse the HTML = 
 
