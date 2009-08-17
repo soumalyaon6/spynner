@@ -81,7 +81,7 @@ browser.show()
 ...
 }}}
 
-With the help of [http://ipython.scipy.org/ ipython] you can run interactive sessions:
+You can also run interactive browsing with [http://ipython.scipy.org/ ipython]:
 
 {{{
 $ ipython
