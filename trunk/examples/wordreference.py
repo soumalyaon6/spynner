@@ -17,7 +17,7 @@ print "url:", browser.url
 
 # Soup is a PyQuery object
 browser.soup.make_links_absolute(base_url=browser.url)
-print "html:", browser.soup("#Otbl").html()
+print "html:", len(browser.soup("#Otbl").html())
 
 # Demonstrate how to download a resource using PyQuery soup
 imagedata = browser.download(browser.soup("img:first").attr('src'))
