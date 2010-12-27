@@ -194,8 +194,7 @@ class Browser:
                 request.setUrl(QUrl("about:blank"))
             else:
                 self._debug(DEBUG, "URL not filtered: %s" % url)
-        reply = QNetworkAccessManager.createRequest(self.manager, 
-            operation, request, data)        
+        reply = QNetworkAccessManager.createRequest(self.manager, operation, request, data)
         return reply
 
     def _on_reply(self, reply):
@@ -274,6 +273,8 @@ class Browser:
     def _start_download(self, reply, outfd):
         def _on_ready_read():
             data = reply.readAll()
+            if not hasattr(reply, "downloaded_nbytes"):
+                reply.downloaded_nbytes = 0
             reply.downloaded_nbytes += len(data)
             outfd.write(data)
             self._debug(DEBUG, "Read from download stream (%d bytes): %s" 
@@ -325,9 +326,11 @@ class Browser:
         code2 = "result = %s; result.length" % code
         if self.runjs(code2).toInt() < 1:
             raise SpynnerJavascriptError("error on %s: %s" % (name, code))
+            
 
     def _get_html(self):
         return unicode(self.webframe.toHtml())
+        #return str(self.webframe.toHtml().toAscii())
 
     def _get_soup(self):
         if not self._html_parser:
@@ -521,8 +524,11 @@ class Browser:
         @note: You can change the _jQuery alias (see L{jslib}).        
         """
         if debug:
-            self._debug(DEBUG, "Run Javascript code: %s" % jscode)
-        return self.webpage.mainFrame().evaluateJavaScript(jscode)
+            self._debug(DEBUG, "Run Javascript code: %s" % jscode)        
+        r = self.webpage.mainFrame().evaluateJavaScript(jscode)
+        if not r.isValid():
+            r = self.webpage.mainFrame().evaluateJavaScript(jscode)
+        return r
 
     def set_javascript_confirm_callback(self, callback):
         """
