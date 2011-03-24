@@ -38,7 +38,7 @@ $ sudo python setup.py install
 
 = API =
 
-http://tokland.freehostia.com/googlecode/spynner/api/
+[http://download.zaudera.com/public/spynner/api/ Browser API]
 
 You can generate the API locally (will create docs/api directory):
 
