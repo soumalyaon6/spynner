@@ -36,6 +36,7 @@ from PyQt4.QtGui import QApplication, QImage, QPainter, QRegion, QAction
 from PyQt4.QtNetwork import QNetworkCookie, QNetworkAccessManager, QNetworkReply
 from PyQt4.QtNetwork import QNetworkCookieJar, QNetworkRequest
 from PyQt4.QtWebKit import QWebPage, QWebView, QWebFrame
+from PyQt4.QtNetwork import QNetworkProxy
 
 # Debug levels
 ERROR, WARNING, INFO, DEBUG = range(4)
@@ -132,7 +133,7 @@ class Browser:
         self._operation_names = dict(
             (getattr(QNetworkAccessManager, s + "Operation"), s.lower()) 
             for s in ("Get", "Head", "Post", "Put"))
-        
+                
         # Webpage slots         
         self._load_status = None
         self._replies = 0
@@ -430,6 +431,27 @@ class Browser:
         if self.webpage:
             del self.webpage
 
+    @classmethod
+    def configure_proxy(cls, hostname, port, user=None, password=None,
+                        proxy_type=QNetworkProxy.HttpProxy):
+        """
+        Configure network proxy layer. 
+        
+        @param proxy_type: see QNetworkProxy.ProxyType. Default: HttpProxy.
+        @param hostname: Proxy hostname.
+        @param port: Proxy port.
+        @param username: Proxy username (optional).
+        @param passwrod: Proxy password (optional).
+        """   
+        proxy = QNetworkProxy()
+        proxy.setType(proxy_type)
+        proxy.setHostName(hostname)
+        proxy.setPort(port)
+        if user and password is not None:
+            proxy.setUser(user)
+            proxy.setPassword(password)
+        QNetworkProxy.setApplicationProxy(proxy);
+        
     #}
                       
     #{ Webview
