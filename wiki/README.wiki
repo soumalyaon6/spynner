@@ -1,5 +1,5 @@
 #summary Basic information about spynner.
-#labels Featured,Phase-Design
+#labels Phase-Design
 = Introduction =
 
 Spynner is a stateful programmatic web browser module for Python. It is based upon [http://www.qtsoftware.com/ Qt] and [http://webkit.org/ WebKit], so it supports Javascript, AJAX, and every other technology that !WebKit is able to handle (Flash, SVG, ...). Spynner takes advantage of [http://jquery.com jQuery], a powerful Javascript library that makes the interaction with pages and event simulation straightforward.  
